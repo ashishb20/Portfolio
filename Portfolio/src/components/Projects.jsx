@@ -11,14 +11,14 @@ const Projects = () => {
             description: "A real time news dashboard that aggregate major headlines from India's top newspapers into a clean single-screen interface",
             techStack: ["React", "Node.js", "Express.js", "MongoDB", "RSS feeds", "CSS"],
             githubLink: "https://github.com/ashishb20/NewsMania",
-            demoLink: null
+            demoLink: "https://newsmania-0bu0.onrender.com/"
         },
         {
             title: "LinkShrink",
-            description: "A URL shortening service that allows users to create short, shareable links from long URLs.",
+            description: "A URL shortening service that allows users to create short, shareable links from long URLs with custom titles along with QR code feature for each URL.",
             techStack: ["React", "Node.js", "Express.js", "MongoDB", "CSS"],
             githubLink: "https://github.com/ashishb20/LinkShrink",
-            demoLink: null
+            demoLink: "https://link-shrink-one.vercel.app/"
         },
         {
             title: "Directory Organizer",
