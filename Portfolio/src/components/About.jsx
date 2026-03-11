@@ -23,7 +23,7 @@ const About = () => {
                         Hello! I'm Ashish, a developer based in India.
                     </p>
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
-                        I recently built a <strong>Directory Organizer</strong> using Python, which sparked my interest in automation and system-level programming, alongside my passion for web development.
+                        I recently built a <strong>URL shortener service</strong> using MERN stack.
                         Currently I'm learning backend development and exploring the world of <strong>Node.js</strong> and <strong>Express.js</strong>. I'm also diving into <strong>Data Structures & Algorithms</strong> to strengthen my problem-solving skills. My goal is to become a proficient full-stack developer and contribute to impactful projects.
                     </p>
 
