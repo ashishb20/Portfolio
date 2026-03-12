@@ -15,6 +15,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
         <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
           <li><a href="#hero" className="nav-link" onClick={() => setIsOpen(false)}>Home</a></li>
           <li><a href="#projects" className="nav-link" onClick={() => setIsOpen(false)}>Projects</a></li>
+          <li><a href="#certifications" className="nav-link" onClick={() => setIsOpen(false)}>Certifications</a></li>
           <li><a href="#contribution" className="nav-link" onClick={() => setIsOpen(false)}>Contribution</a></li>
           <li><a href="#about" className="nav-link" onClick={() => setIsOpen(false)}>About</a></li>
           <li><a href="#contact" className="nav-link" onClick={() => setIsOpen(false)}>Contact</a></li>

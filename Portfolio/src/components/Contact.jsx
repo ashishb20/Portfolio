@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -69,16 +70,69 @@ const Contact = () => {
                     viewport={{ once: true }}
                 >
                     <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.1rem', lineHeight: '1.6' }}>
-                        I’m currently looking for new opportunities, my inbox is always open.
-                        Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+                        Open to full-stack Developer / SDE-1 roles. Feel free to reach out.
                     </p>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--text-secondary)' }}>
-                            <span>📧</span>
-                            <a href="mailto:ashish.jdh2020@gmail.com" style={{ color: 'var(--text-primary)', textDecoration: 'none' }}>ashish.jdh2020@gmail.com</a>
+                        {[
+                            { icon: <FaEnvelope size={20} />, label: "Email", value: "ashish.jdh2020@gmail.com", href: "mailto:ashish.jdh2020@gmail.com" },
+                            { icon: <FaLinkedin size={20} />, label: "LinkedIn", value: "ashish-bairwa", href: "https://www.linkedin.com/in/ashish-bairwa20" },
+                            { icon: <FaGithub size={20} />, label: "GitHub", value: "ashishb20", href: "https://github.com/ashishb20" },
+                        ].map((item, i) => (
+                            <a key={i} href={item.href} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                                <div style={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '1.5rem',
+                                    background: 'var(--bg-secondary)',
+                                    padding: '1.5rem',
+                                    borderRadius: '1rem',
+                                    border: '1px solid var(--border-color)',
+                                    transition: 'transform 0.3s ease, border-color 0.3s ease'
+                                }}>
+                                    <div style={{
+                                        background: 'rgba(59, 130, 246, 0.1)',
+                                        color: '#3b85f6',
+                                        padding: '1rem',
+                                        borderRadius: '0.8rem',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center'
+
+                                    }}>
+                                        {item.icon}
+                                    </div>
+                                    <div>
+                                        <div style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '1px', marginBottom: '0.3rem' }}>
+                                            {item.label}
+                                        </div>
+                                        <div style={{ color: 'var(--text-primary)', fontSize: '1.1rem', fontWeight: 500 }}>
+                                            {item.value}
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        ))}
+
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '1rem',
+                            background: 'rgba(16, 185, 129, 0.05)',
+                            padding: '1.5rem',
+                            borderRadius: '1rem',
+                            border: '1px solid rgba(16, 185, 129, 0.2)',
+                        }}>
+                            <div style={{
+                                width: '12px',
+                                height:'12px',
+                                borderRadius: '50%',
+                                backgroundColor: '#67e771',
+                                boxShadow: '0 0 0 4px rgba(16, 185, 129, 0.2)'
+                            }}>
+                            </div>
+                            <span style={{ color: '#27dd79', fontSize: '1rem', fontWeight: 500 }}>Open for opportunities</span>
                         </div>
-                        {/* You can add more contact info here like Location or Phone if desired */}
                     </div>
                 </motion.div>
 
