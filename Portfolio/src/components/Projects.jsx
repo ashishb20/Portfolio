@@ -7,6 +7,13 @@ const Projects = () => {
     // You can add more projects here
     const projects = [
         {
+            title: "RecallOps",
+            description: "A specialized learning task manager based on proven 1-4-7 Spaced Repetition Method to conquer the forgetting curve bu automating the scheduling of review session of tasks",
+            techStack: ["React", "Node.js", "Express.js", "MongoDB"],
+            githubLink: "https://github.com/ashishb20/RecallOps",
+            demoLink: "https://recallops-1.vercel.app/login"
+        },
+        {
             title: "NewsMania",
             description: "A real time news dashboard that aggregate major headlines from India's top newspapers into a clean single-screen interface",
             techStack: ["React", "Node.js", "Express.js", "MongoDB", "RSS feeds", "CSS"],
