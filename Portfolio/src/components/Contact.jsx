@@ -224,15 +224,6 @@ const Contact = () => {
                     </button>
                 </motion.form>
             </div>
-            {/* Responsive styles for Contact section */}
-            <style jsx>{`
-        @media (max-width: 768px) {
-            #contact > div {
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
-            }
-        }
-      `}</style>
         </section>
     );
 };

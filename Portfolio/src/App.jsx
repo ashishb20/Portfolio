@@ -7,28 +7,29 @@ import Projects from './components/Projects'
 import Contribution from './components/Contribution'
 import Contact from './components/Contact'
 import './App.css'
+import SocialStrip from './components/SocialStrip'
 
 function App() {
-    const [darkMode, setDarkMode] = useState(true);
-    useEffect( () => {
-        const savedTheme = localStorage.getItem('theme');
-        if(savedTheme) {
-            setDarkMode(savedTheme === 'dark');;
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setDarkMode(true);
-        }
-    }, []);
+  const [darkMode, setDarkMode] = useState(true);
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setDarkMode(savedTheme === 'dark');;
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setDarkMode(true);
+    }
+  }, []);
 
-    useEffect( () => {
-        document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
-        localStorage.setItem('theme', darkMode ? 'dark' : 'light');
-    }, [darkMode]);
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+  }, [darkMode]);
 
-    const toggleTheme = () => {
-        setDarkMode(!darkMode);
-    };
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
 
-    return (
+  return (
     <div className="app">
       <Navbar darkMode={darkMode} toggleTheme={toggleTheme} />
       <main>

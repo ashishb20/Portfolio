@@ -106,3 +106,36 @@ button {
   align-items: center;
   justify-content: center;
 }
+
+
+.social-strip {
+  margin-top: 25px;
+  display: flex;
+  gap: 18px;
+  justify-content: flex-start; /* or center */
+}
+
+.social-strip a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ccc;
+  font-size: 18px;
+
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+/* Hover effect like your UI */
+.social-strip a:hover {
+  color: #4da3ff;
+  border-color: #4da3ff;
+  box-shadow: 0 0 12px rgba(77, 163, 255, 0.6);
+  transform: translateY(-2px);
+}

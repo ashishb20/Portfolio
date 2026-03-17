@@ -6,7 +6,7 @@ import { FaRobot, FaTools, FaLaptopCode, FaDatabase } from "react-icons/fa";
 const CertificationCard = ({ title, category, description, icon }) => {
     return (
         <motion.div
-            variations={{
+            variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
             }}
@@ -126,13 +126,6 @@ const Certifications = () => {
                     <CertificationCard key={index} {...cert} />
                 ))}
             </motion.div>
-            <style jsx>{`
-               @media (max-width: 600px) {
-                  #certifications > div {
-                      grid-template-columns : 1fr !important;
-                  }
-              }
-            `}</style>
         </section>
     );
 };

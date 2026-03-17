@@ -1,6 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+import SocialStrip from './SocialStrip';
 
 const Hero = () => {
     return (
@@ -50,6 +51,7 @@ const Hero = () => {
                         <a href="/resume.pdf" target="_blank" className="btn btn-primary">Resume</a>
                         <a href="#contact" className="btn btn-outline">Contact Me</a>
                     </motion.div>
+                    <SocialStrip />
                 </div>
 
                 {/* Profile Picture Placeholder */}

@@ -27,7 +27,7 @@ const About = () => {
                         Currently I'm learning backend development and exploring the world of <strong>Node.js</strong> and <strong>Express.js</strong>. I'm also diving into <strong>Data Structures & Algorithms</strong> to strengthen my problem-solving skills. My goal is to become a proficient full-stack developer and contribute to impactful projects.
                     </p>
 
-                    <h3 style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginBottom: '0.8rem' }}>Education & Courses</h3>
+                    {/* <h3 style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginBottom: '0.8rem' }}>Education & Courses</h3>
                     <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.8rem' }}>
                         {[
                             'BS Mathematics and Scientific Computing( IIT Kanpur )',
@@ -41,7 +41,7 @@ const About = () => {
                                 <span style={{ color: 'var(--primary-color)' }}>▹</span> {item}
                             </li>
                         ))}
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
 
