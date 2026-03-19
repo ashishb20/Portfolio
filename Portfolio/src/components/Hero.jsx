@@ -19,7 +19,7 @@ const Hero = () => {
                         transition={{ duration: 0.5 }}
                         className="hero-greeting"
                     >
-                        Hi, my name is
+                        Hello, I'm
                     </motion.span>
 
                     <motion.h1
@@ -29,7 +29,7 @@ const Hero = () => {
                         className="hero-title"
                     >
                         Ashish Bairwa. <br />
-                        <span style={{ color: 'var(--text-secondary)' }}>I build things for the web.</span>
+                        {/* <span style={{ color: 'var(--text-secondary)' }}>I build things for the web.</span> */}
                     </motion.h1>
 
                     <motion.p
@@ -38,7 +38,7 @@ const Hero = () => {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="hero-subtitle"
                     >
-                        I'm a Aspiring software engineer.
+                        Full-stack Developer building scalable, high-performance, user-friendly web applications.
                     </motion.p>
 
                     <motion.div
