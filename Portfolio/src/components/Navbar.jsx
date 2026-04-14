@@ -2,41 +2,43 @@ import React, { useState } from 'react';
 import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = ({ darkMode, toggleTheme }) => {
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+    const close = () => setIsOpen(false);
 
-  return (
-    <nav className="navbar">
-      <div className="container navbar-content">
-        <a href="#" className="logo">AB.</a>
+    const links = [
+        { href: '#hero', label: 'Home' },
+        { href: '#projects', label: 'Projects' },
+        { href: '#experience', label: 'Experience' },
+        { href: '#skills', label: 'Skills' },
+        { href: '#contribution', label: 'Activity' },
+        { href: '#contact', label: 'Contact' },
+    ];
 
-        {/* Desktop Menu */}
-        <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-          <li><a href="#hero" className="nav-link" onClick={() => setIsOpen(false)}>Home</a></li>
-          <li><a href="#projects" className="nav-link" onClick={() => setIsOpen(false)}>Projects</a></li>
-          <li><a href="#certifications" className="nav-link" onClick={() => setIsOpen(false)}>Certifications</a></li>
-          <li><a href="#contribution" className="nav-link" onClick={() => setIsOpen(false)}>Contribution</a></li>
-          <li><a href="#about" className="nav-link" onClick={() => setIsOpen(false)}>About</a></li>
-          <li><a href="#contact" className="nav-link" onClick={() => setIsOpen(false)}>Contact</a></li>
-        </ul>
+    return (
+        <nav className="navbar">
+            <div className="container navbar-content">
+                <a href="#" className="logo">AB.</a>
 
-        {/* Mobile Menu Toggle & Theme Toggle */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
-            {darkMode ? <FaSun /> : <FaMoon />}
-          </button>
+                <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
+                    {links.map(link => (
+                        <li key={link.href}>
+                            <a href={link.href} className="nav-link" onClick={close}>{link.label}</a>
+                        </li>
+                    ))}
+                </ul>
 
-          <button className="mobile-menu-btn" onClick={toggleMenu}>
-            {isOpen ? <FaTimes /> : <FaBars />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu Overlay for better mobile styling if needed, keeping it simple for now which relies on CSS classes */}
-
-    </nav>
-  );
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle Theme">
+                        {darkMode ? <FaSun /> : <FaMoon />}
+                    </button>
+                    <button className="mobile-menu-btn" onClick={() => setIsOpen(!isOpen)}>
+                        {isOpen ? <FaTimes /> : <FaBars />}
+                    </button>
+                </div>
+            </div>
+        </nav>
+    );
 };
 
 export default Navbar;
